@@ -1,0 +1,272 @@
+/* ============================================================
+   VOV ENHANCE — VnExpress UX Patterns Applied to VOV.vn
+   Additive only. Nothing removed. VOV brand preserved.
+   ============================================================ */
+
+/* ── 1. LIGHT NAVBAR (VnExpress style) ── */
+.dark.bg-vov-primary.vovvn-navbar,
+nav.dark.bg-vov-primary,
+.vovvn-navbar {
+  background-color: #f8f8f8 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08) !important;
+}
+
+/* Nav links: dark text on light bg */
+.vovvn-navbar .nav-link,
+.vovvn-navbar a {
+  color: #333 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  padding: 8px 10px !important;
+  transition: color .2s, border-color .2s !important;
+}
+
+/* Hover state — VOV red */
+.vovvn-navbar .nav-link:hover,
+.vovvn-navbar a:hover {
+  color: #c0392b !important;
+  background-color: transparent !important;
+}
+
+/* Active nav item — red left-border (VnExpress style) */
+.vovvn-navbar .nav-item.active > .nav-link,
+.vovvn-navbar .nav-link.active {
+  color: #c0392b !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #c0392b !important;
+}
+
+/* VOV+ special pill stays gold */
+.vovvn-navbar .nav-link[href*="vov-plus"],
+.vovvn-navbar .vov-plus-nav {
+  color: #c0392b !important;
+  font-weight: 700 !important;
+  background: transparent !important;
+}
+
+/* ── 2. HEADER — lighter, more breathing room ── */
+.vovvn-header {
+  background: #fff !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+/* ── 3. SECTION HEADERS — VnExpress left-border style ── */
+.parent-category a,
+.title-box,
+.box-title,
+[class*="section-title"],
+.category-name,
+.block-title,
+h2.title,
+h3.title {
+  border-left: 3px solid #c0392b !important;
+  padding-left: 10px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #222 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* ── 4. WHITE SPACE — VnExpress generous spacing ── */
+.vovvn-body .container,
+.section-main,
+.block-content,
+[class*="block-news"] {
+  padding-top: 20px !important;
+}
+
+.section-main,
+.block-news,
+[class*="list-news"],
+.row-news {
+  margin-bottom: 28px !important;
+}
+
+/* ── 5. ARTICLE CARD IMAGES — consistent 16:9 ratio ── */
+.card-img-top,
+.item-news img,
+.thumb-art img,
+.thumb img,
+.cover img,
+.image-cover img,
+figure img,
+.article-img img {
+  aspect-ratio: 16 / 9 !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* ── 6. ARTICLE TITLE HOVER — VnExpress red on hover ── */
+.card-title a,
+.title-news a,
+.article-title a,
+.node-title a,
+h3 a,
+h4 a {
+  transition: color .2s ease !important;
+}
+.card-title a:hover,
+.title-news a:hover,
+.article-title a:hover,
+.node-title a:hover,
+h3 a:hover,
+h4 a:hover {
+  color: #c0392b !important;
+  text-decoration: underline !important;
+}
+
+/* ── 7. TYPOGRAPHY — better line heights & sizes ── */
+body,
+.paragraph-normal,
+p {
+  line-height: 1.65 !important;
+}
+
+.card-title,
+.title-news,
+.article-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #212121 !important;
+}
+
+/* Article description / excerpt */
+.description,
+.sapo,
+.article-sapo,
+.lead {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+  display: block !important;
+}
+
+/* ── 8. LIST ARTICLE CARD — VnExpress horizontal layout ── */
+.list-news-subfolder .item-news,
+.list-news .item-news,
+.item-news-sub {
+  display: flex !important;
+  gap: 12px !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  align-items: flex-start !important;
+}
+
+.list-news .item-news .thumb,
+.list-news .item-news .thumb-art {
+  flex-shrink: 0 !important;
+  width: 110px !important;
+}
+
+.list-news .item-news .thumb img,
+.list-news .item-news .thumb-art img {
+  width: 110px !important;
+  height: 75px !important;
+  aspect-ratio: unset !important;
+  object-fit: cover !important;
+}
+
+/* ── 9. IMAGE HOVER — subtle scale (VnExpress style) ── */
+.thumb, .thumb-art, .cover, .article-img,
+.card-img-top, .image-cover {
+  overflow: hidden !important;
+}
+
+.thumb img, .thumb-art img, .cover img,
+.article-img img, .card-img-top,
+.image-cover img {
+  transition: transform .35s ease !important;
+}
+
+.thumb:hover img, .thumb-art:hover img,
+.cover:hover img, .article-img:hover img,
+.card-img-top:hover, .image-cover:hover img {
+  transform: scale(1.04) !important;
+}
+
+/* ── 10. BREAKING NEWS TICKER (injected by JS) ── */
+#vov-ticker-bar {
+  display: flex;
+  align-items: center;
+  background: #c0392b;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 16px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+#vov-ticker-bar .ticker-label {
+  background: #fff;
+  color: #c0392b;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+#vov-ticker-bar .ticker-text {
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+
+#vov-ticker-bar .ticker-item {
+  display: none;
+  animation: fadeIn .4s ease;
+}
+#vov-ticker-bar .ticker-item.active {
+  display: inline;
+}
+#vov-ticker-bar .ticker-item a {
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+#vov-ticker-bar .ticker-item a:hover {
+  text-decoration: underline !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 11. RESPONSIVE IMPROVEMENTS ── */
+@media (max-width: 768px) {
+  .card-title, .title-news, .article-title {
+    font-size: 14px !important;
+  }
+
+  .list-news .item-news .thumb,
+  .list-news .item-news .thumb-art {
+    width: 85px !important;
+  }
+
+  .list-news .item-news .thumb img,
+  .list-news .item-news .thumb-art img {
+    width: 85px !important;
+    height: 58px !important;
+  }
+
+  .section-main, .block-news {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* ── 12. SMOOTH SCROLL & FOCUS ── */
+html { scroll-behavior: smooth; }
+
+a:focus-visible {
+  outline: 2px solid #c0392b;
+  outline-offset: 2px;
+  border-radius: 2px;
+}

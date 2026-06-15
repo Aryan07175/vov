@@ -1,0 +1,305 @@
+/* ============================================================
+   VNEXPRESS TRANSFORMATION THEME
+   Aggressively overrides VOV Bootstrap to match VNE layout
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans:wght@400;500;700&display=swap');
+
+/* --- 1. GLOBAL LAYOUT & TYPOGRAPHY --- */
+body, html {
+    font-family: arial, 'Noto Sans', sans-serif !important;
+    background-color: #fff !important;
+    color: #222 !important;
+    line-height: 1.6 !important;
+    margin: 0; padding: 0;
+}
+
+/* Force VnExpress Container Width (1160px) */
+.container, 
+.vne-header-wrap, 
+.vne-nav-wrap > div,
+.vne-main-container .container,
+.vovvn-body > .container {
+    max-width: 1160px !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+}
+
+a {
+    color: #222 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #9f224e !important; /* VnExpress Red */
+}
+
+/* --- 2. HEADER RECONSTRUCTION --- */
+.vne-header-wrap {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 60px !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.vne-logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.vne-logo-area img {
+    height: 35px !important; /* Scale VOV logo to VNE size */
+    width: auto !important;
+}
+
+.vne-date {
+    color: #757575 !important;
+    font-size: 14px !important;
+    padding-left: 15px !important;
+    border-left: 1px solid #e5e5e5 !important;
+}
+
+.vne-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.vne-header-link {
+    color: #757575 !important;
+    font-size: 14px !important;
+}
+
+.vne-header-link:hover {
+    color: #222 !important;
+}
+
+.vne-intl {
+    color: #9f224e !important;
+    border: 1px solid #e5e5e5 !important;
+    padding: 3px 8px !important;
+    border-radius: 3px !important;
+    font-size: 12px !important;
+}
+
+/* Hide VOV original search, we'd need to rebuild it, but for now just hide the form elements and use an icon */
+.vne-search-form {
+    display: none !important; /* Simplify for now to match VNE clean look */
+}
+
+/* --- 3. STICKY NAVIGATION BAR --- */
+.vne-nav-wrap {
+    background-color: #f7f7f7 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    height: 48px !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
+.vne-nav-wrap .vovvn-navbar {
+    padding: 0 !important;
+    height: 100% !important;
+    background: none !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.vne-nav-wrap .navbar-nav {
+    flex-direction: row !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+}
+
+.vne-nav-wrap .nav-link,
+.vne-nav-wrap a {
+    color: #222 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 14px 12px !important;
+    white-space: nowrap !important;
+    border-bottom: 2px solid transparent !important;
+}
+
+.vne-nav-wrap .nav-link:hover,
+.vne-nav-wrap a:hover {
+    color: #9f224e !important;
+    background: transparent !important;
+}
+
+/* --- 4. HERO SECTION (Split Layout) --- */
+.vne-hero-layout {
+    display: flex !important;
+    background-color: #f7f7f7 !important;
+    margin-bottom: 30px !important;
+    margin-top: 20px !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.vne-hero-img {
+    flex: 0 0 66% !important;
+    max-width: 66% !important;
+}
+
+.vne-hero-img img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9 !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.vne-hero-text {
+    flex: 0 0 34% !important;
+    max-width: 34% !important;
+    padding: 20px 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.vne-hero-text .node-title {
+    font-family: 'Merriweather', serif !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+    color: #222 !important;
+}
+
+.vne-hero-desc {
+    font-size: 15px !important;
+    color: #444 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* --- 5. ARTICLE GRID & FEED (List format) --- */
+/* Convert typical VOV cards to VNE horizontal list */
+.vne-article-list-item {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    margin: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.vne-article-list-item .thumb,
+.vne-article-list-item .thumb-art,
+.vne-article-list-item .card-img-top {
+    flex: 0 0 160px !important; /* VNE thumb width */
+    max-width: 160px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.vne-article-list-item img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/3 !important;
+    object-fit: cover !important;
+}
+
+.vne-article-text {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.vne-article-text .title-news,
+.vne-article-text .card-title,
+.vne-article-text .article-title {
+    font-family: arial, 'Noto Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+}
+
+.vne-article-text .title-news a,
+.vne-article-text .card-title a,
+.vne-article-text .article-title a {
+    color: #222 !important;
+}
+
+.vne-article-text .title-news a:hover,
+.vne-article-text .card-title a:hover,
+.vne-article-text .article-title a:hover {
+    color: #9f224e !important;
+}
+
+.vne-article-text .description,
+.vne-article-text .sapo {
+    font-size: 14px !important;
+    color: #555 !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+/* --- 6. SECTION HEADERS --- */
+.parent-category a,
+.section-title,
+.block-title,
+h2.title {
+    font-family: arial, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #9f224e !important; /* VNE red */
+    border-left: none !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding: 0 0 10px 0 !important;
+    margin-bottom: 15px !important;
+    text-transform: none !important;
+    display: block !important;
+}
+
+/* --- 7. CLEANUP VOV EXCESS --- */
+/* Hide old background colors, shadows, borders */
+.vovvn-body, .main-content, .bg-light, .bg-white {
+    background-color: transparent !important;
+}
+
+.card {
+    border: none !important;
+}
+
+/* Fix main content grid area if it exists */
+/* Assume standard 3 cols: 1 for content, 1 for sidebar. 
+   We will just rely on flex list items to format correctly */
+.col-md-8, .col-lg-9 {
+    padding-right: 30px !important;
+    border-right: 1px solid #e5e5e5 !important;
+}
+
+.col-md-4, .col-lg-3 {
+    padding-left: 20px !important;
+}
+
+/* 8. Fix specific VOV weirdness */
+.detail--normal .article-content figure figcaption {
+    font-size: 13px !important;
+    color: #757575 !important;
+    background: #f7f7f7 !important;
+    padding: 8px !important;
+}
+
+
+/* FIX FOR SQUISHED SIDEBAR TEXT */
+.col-md-4 .vne-article-list-item,
+.col-lg-3 .vne-article-list-item {
+    flex-direction: column !important;
+}
+.col-md-4 .vne-article-list-item .thumb,
+.col-lg-3 .vne-article-list-item .thumb {
+    max-width: 100% !important;
+    margin-bottom: 10px !important;
+}

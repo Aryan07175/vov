@@ -19,5 +19,3 @@ This project contains a local clone of the VOV.vn website with a complete fronte
 3. Open your browser and navigate to `http://localhost:8765`.
 4. (Recommended) Perform a hard refresh (`Ctrl+F5`) to ensure the latest CSS and JS changes are loaded.
 
-## Important Note
-This project retains 100% of the original VOV content, articles, branding (logos/colors), and functionality. Only the frontend presentation layer has been modified to reflect the layout patterns of VNExpress.
